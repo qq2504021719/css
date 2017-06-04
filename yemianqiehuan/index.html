@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>CSS3网页平滑过渡效果</title>
+	<meta charset="utf-8">
+	<!-- 告诉IE使用最新的渲染模式,防止低版本IE不支持css3的一些属性 -->
+	<meta httpd-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+	<!-- 强制页面宽带适应设备宽度,不出现滚动条,不允许用户缩放  -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- 字体库 -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,700">
+	<!-- 默认的全局样式 -->
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="st-container">
+		<!-- 导航开始 -->
+		<input type="radio" name="radio-set" checked="checked" id="st-control-1">
+		<a href="#st-panel-1">Serendipity</a>
+		<input type="radio" name="radio-set"  id="st-control-2">
+		<a href="#st-panel-2">Happiness</a>
+		<input type="radio" name="radio-set" id="st-control-3">
+		<a href="#st-panel-3">Tranquillity</a>
+		<input type="radio" name="radio-set" id="st-control-4">
+		<a href="#st-panel-4">Positivity</a>
+		<input type="radio" name="radio-set" id="st-control-5">
+		<a href="#st-panel-5">Passion</a>
+		<!-- 导航结束 -->
+
+		<!-- 内容开始 -->
+		<div class="st-scroll">
+			<section class="st-panel" id="st-panel-1">
+				<div class="st-desc" data-icon="H"></div>
+				<h2>Serendipity</h2>
+				<p>Yellow, and black, and pale, and hectic red, Pestilence-stricken multitudes! O thou Who chariotest to their dark wintry bed</p>
+			</section>
+			<section class="st-panel st-color" id="st-panel-2">
+				<div class="st-desc" data-icon="2"></div>
+				<h2>Happiness</h2>
+				<p>Yellow, and black, and pale, and hectic red, Pestilence-stricken multitudes! O thou Who chariotest to their dark wintry bed</p>
+			</section>
+			<section class="st-panel" id="st-panel-3">
+				<div class="st-desc" data-icon="B"></div>
+				<h2>Tranquillity</h2>
+				<p>Yellow, and black, and pale, and hectic red, Pestilence-stricken multitudes! O thou Who chariotest to their dark wintry bed</p>
+			</section>
+			<section class="st-panel st-color" id="st-panel-4">
+				<div class="st-desc" data-icon="x"></div>
+				<h2>Positivity</h2>
+				<p>Yellow, and black, and pale, and hectic red, Pestilence-stricken multitudes! O thou Who chariotest to their dark wintry bed</p>
+			</section>
+			<section class="st-panel" id="st-panel-5">
+				<div class="st-desc" data-icon="l"></div>
+				<h2>Passion</h2>
+				<p>Yellow, and black, and pale, and hectic red, Pestilence-stricken multitudes! O thou Who chariotest to their dark wintry bed</p>
+			</section>
+		</div>
+		<!-- 内容结束 -->
+
+	</div>
+</div>
+</body>
+</html>
