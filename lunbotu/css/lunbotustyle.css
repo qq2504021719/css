@@ -1,0 +1,60 @@
+.lunbotu{
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+}
+.lunbotu .tupian{
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+.lunbotu .anniu{
+	position: absolute;
+	left: 50%;
+	width: 20%;
+	height: 40px;
+	margin-left: -90px;
+	bottom: 20px;
+}
+
+
+
+.lunbotu .anniu input,
+.lunbotu .anniu .inputdiv{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	cursor: pointer;
+
+}
+.lunbotu .anniu input{
+	/*margin-left: 20px;*/
+}
+.lunbotu .anniu > input{
+	opacity: 0;
+	z-index: 1000;
+}
+.lunbotu .anniu > .inputdiv{
+	background: #000;
+	z-index: 10;
+}
+#tupian-1,#tupian-1 +.inputdiv{
+	left: 0px;
+}
+#tupian-2,#tupian-2 +.inputdiv{
+	left: 40px;
+}
+#tupian-3,#tupian-3 +.inputdiv{
+	left: 80px;
+}
+#tupian-4,#tupian-4 +.inputdiv{
+	left: 120px;
+}
+#tupian-5,#tupian-5 +.inputdiv{
+	left: 160px;
+}
+
+
