@@ -16,34 +16,100 @@
 <div class="container">
 	<!-- 路轮播图开始 -->
 	<div class="lunbotu">
-		<div class="anniu">
-			<input type="radio" name="lunbotu-input" id="tupian-1" checked="checked">
-			<div class="inputdiv"></div>
-			<input type="radio" name="lunbotu-input" id="tupian-2">
-			<div class="inputdiv"></div>
-			<input type="radio" name="lunbotu-input" id="tupian-3">
-			<div class="inputdiv"></div>
-			<input type="radio" name="lunbotu-input" id="tupian-4">
-			<div class="inputdiv"></div>
-			<input type="radio" name="lunbotu-input" id="tupian-5">
-			<div class="inputdiv"></div>
-		</div>
-		<div class="tupian-1 tupian">
-			<img src="./img/53d07b97b6595.jpg" style="width: 100%;">
-		</div>
-		<div class="tupian-2 tupian">
-			<img src="./img/53d07b9b9cb86.jpg">
-		</div>
-		<div class="tupian-3 tupian">
-			<img src="./img/53d07b9f6bdf6.jpg">
-		</div>
-		<div class="tupian-4 tupian">
-			<img src="./img/53d07ba363c71.jpg">
-		</div>
-		<div class="tupian-5 tupian">
-			<img src="./img/53d07b9484c86.jpg">
+		<input type="radio" name="lunbotu-input" id="tupian-1" data-is="1" checked="checked">
+		<div class="inputdiv"></div>
+		<input type="radio" name="lunbotu-input" id="tupian-2" data-is="2">
+		<div class="inputdiv"></div>
+		<input type="radio" name="lunbotu-input" id="tupian-3" data-is="3">
+		<div class="inputdiv"></div>
+		<input type="radio" name="lunbotu-input" id="tupian-4" data-is="4">
+		<div class="inputdiv"></div>
+		<input type="radio" name="lunbotu-input" id="tupian-5" data-is="5">
+		<div class="inputdiv"></div>
+		<div id="tupian">
+			<section class="tupian-1 tupian">
+				<img src="./img/53d07b97b6595.jpg">
+			</section>
+			<section class="tupian-2 tupian">
+				<img src="./img/53d07b9b9cb86.jpg">
+			</section>
+			<section class="tupian-3 tupian">
+				<img src="./img/53d07b9f6bdf6.jpg">
+			</section>
+			<section class="tupian-4 tupian">
+				<img src="./img/53d07ba363c71.jpg">
+			</section>
+			<section class="tupian-5 tupian">
+				<img src="./img/53d07b9484c86.jpg">
+			</section>
 		</div>
 	</div>
+	<script type="text/javascript">
+		// 当前图片标识
+		var dangqian_tubs = 1;
+		// 最大图片数 
+		var tup_max = 5;
+		// 最小图片数
+		var tup_min = 1;
+		// 刷新图片标识
+		function shauxin_tubs(){
+			$('.lunbotu input,.lunbotu input').each(function(){
+	            var val=$(this);
+	            if(val['context']['checked']==true){
+	            	dangqian_tubs = $(this).attr('data-is');
+	            }else{
+	            }
+	        });
+
+		}
+
+		// 显示知道标识图片
+		function xianshi_tp_yc(bs){
+			console.log(bs);
+			$('.lunbotu input,.lunbotu input').each(function(){
+	            var val=$(this);
+	            var is_bs = $(this).attr('data-is');
+	            if(is_bs == bs){
+	            	val['context']['checked'] = true;
+	            }else{
+	            }
+	        });
+		}
+
+
+
+		function _touch(){
+		      var startx;//让startx在touch事件函数里是全局性变量。
+		      var endx;
+		       var el=document.getElementById('tupian');
+		      function cons(){   //独立封装这个事件可以保证执行顺序，从而能够访问得到应该访问的数据。
+		             console.log(starty,endy);
+		             if(startx>endx){  //判断左右移动程序
+		             	if(dangqian_tubs < tup_max){
+		             		dangqian_tubs = dangqian_tubs+1;
+		             		xianshi_tp_yc(dangqian_tubs);
+		             	}
+		              }else{
+		                if(dangqian_tubs > tup_min){
+		             		dangqian_tubs = dangqian_tubs-1;
+		             		xianshi_tp_yc(dangqian_tubs);
+		             	}
+		             }
+		       }
+		       el.addEventListener('touchstart',function(e){
+		               var touch=e.changedTouches;
+		             startx=touch[0].clientX;
+		            starty=touch[0].clientY;
+		    });
+		     el.addEventListener('touchend',function(e){
+		         var touch=e.changedTouches;
+		             endx=touch[0].clientX;
+		              endy=touch[0].clientY;
+		              cons();
+		   });
+		}
+		_touch()
+	</script>
 	<!-- 轮播图结束 -->
 </div>
 </body>

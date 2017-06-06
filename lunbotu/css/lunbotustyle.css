@@ -1,60 +1,163 @@
+
 .lunbotu{
 	width: 100%;
-	height: 500px;
+	height: 400px;
 	position: absolute;
 	overflow: hidden;
 	left: 0;
 	top: 0;
 }
-.lunbotu .tupian{
-	width: 100%;
-	height: 100%;
-	top: 0;
-}
-.lunbotu .anniu{
-	position: absolute;
-	left: 50%;
-	width: 20%;
-	height: 40px;
-	margin-left: -90px;
-	bottom: 20px;
-}
 
 
 
-.lunbotu .anniu input,
-.lunbotu .anniu .inputdiv{
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	cursor: pointer;
-
-}
-.lunbotu .anniu input{
-	/*margin-left: 20px;*/
-}
-.lunbotu .anniu > input{
-	opacity: 0;
-	z-index: 1000;
-}
-.lunbotu .anniu > .inputdiv{
-	background: #000;
-	z-index: 10;
-}
 #tupian-1,#tupian-1 +.inputdiv{
-	left: 0px;
+	margin-left: -60px;
 }
 #tupian-2,#tupian-2 +.inputdiv{
-	left: 40px;
+	margin-left: -30px;
 }
 #tupian-3,#tupian-3 +.inputdiv{
-	left: 80px;
+	margin-left: 0px;
 }
 #tupian-4,#tupian-4 +.inputdiv{
-	left: 120px;
+	margin-left: 30px;
 }
 #tupian-5,#tupian-5 +.inputdiv{
-	left: 160px;
+	margin-left: 60px;
 }
+
+.lunbotu input,
+.lunbotu .inputdiv{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	cursor: pointer;
+}
+
+.lunbotu > input{
+	opacity: 0;
+	margin-left: 1px;
+	z-index: 1000;
+}
+.lunbotu  > .inputdiv{
+	width: 14px;
+	height: 14px;
+	opacity: 0.5;
+	border-radius: 15px;
+	border:1px solid #fff;
+	z-index: 10;
+}
+
+
+.lunbotu > input:checked + .inputdiv,
+.lunbotu > input:checked:hover + .inputdiv{
+	background: #fff;
+	opacity: 0.5;
+}
+
+#tupian,.tupian{
+	overflow: hidden;
+	background: #fff;
+}
+.tupian{
+	position: absolute;
+	width: 100%;
+	float: left;
+}
+#tupian .tupian img{
+	width: 100%;
+	height: 100%;
+}
+#tupian .tupian-1{margin-left: 0%;}
+#tupian .tupian-2{margin-left: 100%;}
+#tupian .tupian-3{margin-left: 200%;}
+#tupian .tupian-4{margin-left: 300%;}
+#tupian .tupian-5{margin-left: 400%;}
+
+
+#tupian{
+	left: 0;
+	top: 0;
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	-o-transform:translate3d(0,0,0);
+	-ms-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	-webkit-backface-visibility:hidden;
+	/*过渡动画*/
+	-webkit-transition:all 1.5s ease-in-out;
+	-moz-transition:all 1.5s ease-in-out;
+	-o-transition:all 1.5s ease-in-out;
+	-ms-transition:all 1.5s ease-in-out;
+	transition:all 1.5s ease-in-out;
+}
+
+#tupian-1:checked ~ #tupian{
+	-webkit-transform:translateY(0%);
+	-moz-transform:translateY(0%);
+	-o-transform:translateY(0%);
+	-ms-transform:translateY(0%);
+	transform:translateY(0%);
+}
+#tupian-2:checked ~ #tupian{
+	-webkit-transform:translateX(-100%);
+	-moz-transform:translateX(-100%);
+	-o-transform:translateX(-100%);
+	-ms-transform:translateX(-100%);
+	transform:translateX(-100%);
+}
+#tupian-3:checked ~ #tupian{
+	-webkit-transform:translateX(-200%);
+	-moz-transform:translateX(-200%);
+	-o-transform:translateX(-200%);
+	-ms-transform:translateX(-200%);
+	transform:translateX(-200%);
+}
+#tupian-4:checked ~ #tupian{
+	-webkit-transform:translateX(-300%);
+	-moz-transform:translateX(-300%);
+	-o-transform:translateX(-300%);
+	-ms-transform:translateX(-300%);
+	transform:translateX(-300%);
+}
+#tupian-5:checked ~ #tupian{
+	-webkit-transform:translateX(-400%);
+	-moz-transform:translateX(-400%);
+	-o-transform:translateX(-400%);
+	-ms-transform:translateX(-400%);
+	transform:translateX(-400%);
+}
+@media screen and (max-width:768px) and (max-height:1024px){
+	.lunbotu{
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		top: 0;
+	}	
+
+}
+@media screen and (max-width:520px){
+	.lunbotu{
+		width: 100%;
+		height: 150px;
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		top: 0;
+	}	
+	.lunbotu  > .inputdiv{
+		width: 10px;
+		height: 10px;
+		opacity: 1.5;
+		border-radius: 15px;
+		border:1px solid #fff;
+		z-index: 10;
+	}
+}
+
 
 
