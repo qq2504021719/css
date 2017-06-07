@@ -44,72 +44,7 @@
 			</section>
 		</div>
 	</div>
-	<script type="text/javascript">
-		// 当前图片标识
-		var dangqian_tubs = 1;
-		// 最大图片数 
-		var tup_max = 5;
-		// 最小图片数
-		var tup_min = 1;
-		// 刷新图片标识
-		function shauxin_tubs(){
-			$('.lunbotu input,.lunbotu input').each(function(){
-	            var val=$(this);
-	            if(val['context']['checked']==true){
-	            	dangqian_tubs = $(this).attr('data-is');
-	            }else{
-	            }
-	        });
-
-		}
-
-		// 显示知道标识图片
-		function xianshi_tp_yc(bs){
-			console.log(bs);
-			$('.lunbotu input,.lunbotu input').each(function(){
-	            var val=$(this);
-	            var is_bs = $(this).attr('data-is');
-	            if(is_bs == bs){
-	            	val['context']['checked'] = true;
-	            }else{
-	            }
-	        });
-		}
-
-
-
-		function _touch(){
-		      var startx;//让startx在touch事件函数里是全局性变量。
-		      var endx;
-		       var el=document.getElementById('tupian');
-		      function cons(){   //独立封装这个事件可以保证执行顺序，从而能够访问得到应该访问的数据。
-		             console.log(starty,endy);
-		             if(startx>endx){  //判断左右移动程序
-		             	if(dangqian_tubs < tup_max){
-		             		dangqian_tubs = dangqian_tubs+1;
-		             		xianshi_tp_yc(dangqian_tubs);
-		             	}
-		              }else{
-		                if(dangqian_tubs > tup_min){
-		             		dangqian_tubs = dangqian_tubs-1;
-		             		xianshi_tp_yc(dangqian_tubs);
-		             	}
-		             }
-		       }
-		       el.addEventListener('touchstart',function(e){
-		               var touch=e.changedTouches;
-		             startx=touch[0].clientX;
-		            starty=touch[0].clientY;
-		    });
-		     el.addEventListener('touchend',function(e){
-		         var touch=e.changedTouches;
-		             endx=touch[0].clientX;
-		              endy=touch[0].clientY;
-		              cons();
-		   });
-		}
-		_touch()
-	</script>
+	<script type="text/javascript" src="./js/lunbotustyle.js"></script>
 	<!-- 轮播图结束 -->
 </div>
 </body>

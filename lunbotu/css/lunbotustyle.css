@@ -152,7 +152,7 @@
 	.lunbotu  > .inputdiv{
 		width: 10px;
 		height: 10px;
-		opacity: 1.5;
+		opacity: 0.5;
 		border-radius: 15px;
 		border:1px solid #fff;
 		z-index: 10;
