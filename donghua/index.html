@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>CSS3网页平滑过渡效果</title>
+	<meta charset="utf-8">
+	<!-- 告诉IE使用最新的渲染模式,防止低版本IE不支持css3的一些属性 -->
+	<meta httpd-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+	<!-- 强制页面宽带适应设备宽度,不出现滚动条,不允许用户缩放  -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- 默认的全局样式 -->
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<style type="text/css">
+		.container{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.waic{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.waic-c{
+			position: absolute;
+			left: 50%;
+			margin-left: -220px;
+			overflow: hidden;
+		}
+		.waic .opacityclass{
+			float: left;
+		}
+		.opacityclass{opacity:0.5;width: 40px;transition:2s;}
+		.backag1{height:200px;background:#66FFFF;}
+		.backag1:hover{height: 400px;}
+		.backag2{height:250px;background:#66CCFF;}
+		.backag2:hover{height: 500px;}
+		.backag3{height:300px;background:#6699FF;}
+		.backag3:hover{height: 600px;}
+		.backag4{height:350px;background:#6666FF;}
+		.backag4:hover{height: 700px;}
+		.backag5{height:400px;background:#6633FF;}
+		.backag5:hover{height: 800px;}
+		.backag6{height:450px;background:#6600FF;}
+		.backag6:hover{height: 900px;}
+		.backag11{height:200px;background:#66FFFF;}
+		.backag11:hover{height: 400px;}
+		.backag10{height:250px;background:#66CCFF;}
+		.backag10:hover{height: 500px;}
+		.backag9{height:300px;background:#6699FF;}
+		.backag9:hover{height: 600px;}
+		.backag8{height:350px;background:#6666FF;}
+		.backag8:hover{height: 700px;}
+		.backag7{height:400px;background:#6633FF;}
+		.backag7:hover{height: 800px;}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="waic">
+		<div class="waic-c">
+			<div class="opacityclass backag1"></div>
+			<div class="opacityclass backag2"></div>
+			<div class="opacityclass backag3"></div>
+			<div class="opacityclass backag4"></div>
+			<div class="opacityclass backag5"></div>
+			<div class="opacityclass backag6"></div>
+			<div class="opacityclass backag7"></div>
+			<div class="opacityclass backag8"></div>
+			<div class="opacityclass backag9"></div>
+			<div class="opacityclass backag10"></div>
+			<div class="opacityclass backag11"></div>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>
