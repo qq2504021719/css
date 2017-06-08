@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>CSS3网页平滑过渡效果</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.pl-tishi-xianshi{
+		-webkit-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-moz-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-o-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-ms-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		animation:moveDown 1.3s ease-in-out 0.1s backwards;
+	}
+	/*动画需要几帧完成*/
+	@-webkit-keyframes moveDown{
+		0%{-webkit-transform:translateX(250px);opacity: 0;}
+		100%{-webkit-transform:translateX(0px);opacity: 1;}
+	}
+	@-moz-keyframes moveDown{
+		0%{-moz-transform:translateX(250px);opacity: 0;}
+		100%{-moz-transform:translateX(0px);opacity: 1;}
+	}
+	@-o-keyframes moveDown{
+		0%{-o-transform:translateX(250px);opacity: 0;}
+		100%{-o-transform:translateX(0px);opacity: 1;}
+	}
+	@-ms-keyframes moveDown{
+		0%{-ms-transform:translateX(250px);opacity: 0;}
+		100%{-ms-transform:translateX(0px);opacity: 1;}
+	}
+	@keyframes moveDown{
+		0%{transform:translateX(250px);opacity: 0;}
+		100%{transform:translateX(0px);opacity: 1;}
+	}
+
+	.pl-tishi-yingchang{
+		-webkit-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-moz-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-o-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		-ms-animation:moveDown 0.6s ease-in-out 0.3s backwards;
+		animation:moveDown 1.3s ease-in-out 0.1s backwards;
+	}
+	/*动画需要几帧完成*/
+	@-webkit-keyframes moveDown{
+		0%{-webkit-transform:translateX(-250px);opacity: 0;}
+		100%{-webkit-transform:translateX(0px);opacity: 1;}
+	}
+	@-moz-keyframes moveDown{
+		0%{-moz-transform:translateX(-250px);opacity: 0;}
+		100%{-moz-transform:translateX(0px);opacity: 1;}
+	}
+	@-o-keyframes moveDown{
+		0%{-o-transform:translateX(-250px);opacity: 0;}
+		100%{-o-transform:translateX(0px);opacity: 1;}
+	}
+	@-ms-keyframes moveDown{
+		0%{-ms-transform:translateX(-250px);opacity: 0;}
+		100%{-ms-transform:translateX(0px);opacity: 1;}
+	}
+	@keyframes moveDown{
+		0%{transform:translateX(0px);opacity: 0;}
+		100%{transform:translateX(250px);opacity: 1;}
+	}
+
+	.pl-tishi{
+		position: fixed;
+		right: -0;
+		width: 250px;
+		height: 40px;
+		background: #7266ba;
+		/*border-radius: 4px;*/
+		transition:width 2s;
+	}
+	.pl-tishi:hover{
+		width:300px;
+	}
+	.pl-tishi-text{
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+	}
+	</style>
+</head>
+<body>
+<!-- pl-tishi-xianshi 显示 -->
+<!-- pl-tishi-yingchang 隐藏 -->
+<div class="pl-tishi">
+	<div class="pl-tishi-text">
+		页面提示
+	</div>
+</div>
+
+</body>
+</html>
