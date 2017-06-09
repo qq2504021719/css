@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>气泡</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.divleft{
+			margin-top: 20px;
+			height: 80px;
+			width: 100%;
+		}
+		/* 气泡开始*/
+		.spinner{
+			float: left;
+			width: 10px;
+			height: 10px;
+			background-color: #0099FF;
+			border-radius: 100%;
+			/*margin: 100px auto;*/
+			-webkit-animation: fadeOut 2.0s infinite ease-in-out;
+			-moz-animation: fadeOut 2.0s infinite ease-in-out;
+			-ms-animation: fadeOut 2.0s infinite ease-in-out;
+			-o-animation: fadeOut 2.0s infinite ease-in-out;
+			animation: fadeOut 2.0s infinite ease-in-out;
+		}
+		@-webkit-keyframes fadeOut{0%{transform: scale(0.0);}100%{transform: scale(1.0);opacity: 0;}}
+		@-moz-keyframes fadeOut{0%{transform: scale(0.0);}100%{transform: scale(1.0);opacity: 0;}}
+		@-ms-keyframes fadeOut{0%{transform: scale(0.0);}100%{transform: scale(1.0);opacity: 0;}}
+		@-o-keyframes fadeOut{0%{transform: scale(0.0);}100%{transform: scale(1.0);opacity: 0;}}
+		@keyframes fadeOut{0%{transform: scale(0.0);}100%{transform: scale(1.0);opacity: 0;}}
+		/*气泡结束*/
+
+		/*上下缩放开始*/
+		.sahngxiasuof{
+			height: 30px;
+			width: 100%;
+		}
+		.sahngxiasuof .line{
+			margin-left: 5px;
+			float: left;
+			line-height: 80px;
+			width: 5px;
+			height: 100%;
+			background: #00CCCC;
+			-webkit-animation: shangxiajd 1.4s infinite ease-in-out;
+			-moz-animation: shangxiajd 1.4s infinite ease-in-out;
+			-ms-animation: shangxiajd 1.4s infinite ease-in-out;
+			-o-animation: shangxiajd 1.4s infinite ease-in-out;
+			animation: shangxiajd 1.4s infinite ease-in-out;
+		}
+		.sahngxiasuof .line1{
+			-webkit-animation-delay: -1.4s;
+			-moz-animation-delay: -1.4s;
+			-ms-animation-delay: -1.4s;
+			-o-animation-delay: -1.4s;
+			animation-delay: -1.4s;
+		}
+		.sahngxiasuof .line2{
+			-webkit-animation-delay: -1.3s;
+			-moz-animation-delay: -1.3s;
+			-ms-animation-delay: -1.3s;
+			-o-animation-delay: -1.3s;
+			animation-delay: -1.3s;
+		}
+		.sahngxiasuof .line3{
+			-webkit-animation-delay: -1.2s;
+			-moz-animation-delay: -1.2s;
+			-ms-animation-delay: -1.2s;
+			-o-animation-delay: -1.2s;
+			animation-delay: -1.2s;
+		}
+		.sahngxiasuof .line4{
+			-webkit-animation-delay: -1.1s;
+			-moz-animation-delay: -1.1s;
+			-ms-animation-delay: -1.1s;
+			-o-animation-delay: -1.1s;
+			animation-delay: -1.1s;
+		}
+		.sahngxiasuof .line5{
+			-webkit-animation-delay: -1.0s;
+			-moz-animation-delay: -1.0s;
+			-ms-animation-delay: -1.0s;
+			-o-animation-delay: -1.0s;
+			animation-delay: -1.0s;
+		}
+		.sahngxiasuof .line6{
+			-webkit-animation-delay: -0.9s;
+			-moz-animation-delay: -0.9s;
+			-ms-animation-delay: -0.9s;
+			-o-animation-delay: -0.9s;
+			animation-delay: -0.9s;
+		}
+		@-webkit-keyframes shangxiajd{0%,40%,100%{transform:scaleY(0.5);}20%{transform:scaleY(1.2);}}
+		@-moz-keyframes shangxiajd{0%,40%,100%{transform:scaleY(0.5);}20%{transform:scaleY(1.2);}}
+		@-ms-keyframes shangxiajd{0%,40%,100%{transform:scaleY(0.5);}20%{transform:scaleY(1.2);}}
+		@-o-keyframes shangxiajd{0%,40%,100%{transform:scaleY(0.5);}20%{transform:scaleY(1.2);}}
+		@keyframes shangxiajd{0%,40%,100%{transform:scaleY(0.5);}20%{transform:scaleY(1.2);}}
+		/*上下缩放结束*/
+
+		/*缓冲圆环开始*/
+		.huanchonyh{
+			width: 30px;
+			height: 30px;
+			border:3px solid #ccc;
+			border-left-color:#00CCFF;
+			opacity: 0.5;
+			border-radius: 100%;
+			-webkit-animation: haunchon 1.0s infinite ease-in-out;
+			-moz-animation: haunchon 1.0s infinite ease-in-out;
+			-ms-animation: haunchon 1.0s infinite ease-in-out;
+			-o-animation: haunchon 1.0s infinite ease-in-out;
+			animation: haunchon 1.0s infinite ease-in-out;
+		}
+		@-webkit-keyframes haunchon{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+		@-moz-keyframes haunchon{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+		@-ms-keyframes haunchon{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+		@-o-keyframes haunchon{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+		@keyframes haunchon{0%{transform: rotate(0deg);}100%{transform: rotate(360deg);}}
+		/*缓冲圆环结束*/
+
+		/*三角形开始*/
+		.shanjx{
+			height: 250px;
+		}
+		.shanjiaos{
+			width: 0px;
+			height: 0px;
+			border-top: 100px solid #00CC99;
+			border-right: 100px solid #009999;
+			border-bottom: 100px solid #00CC99;
+			border-left: 100px solid #009999;
+		}
+		/*三角形结束*/
+	</style>
+</head>
+<body>
+<div class="divleft">
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+	<div class="spinner"></div>
+</div>
+
+<div class="sahngxiasuof">
+	<div class="line1 line"></div>
+	<div class="line2 line"></div>
+	<div class="line3 line"></div>
+	<div class="line4 line"></div>
+	<div class="line5 line"></div>
+	<div class="line6 line"></div>
+</div>
+
+<!-- 缓冲圆环 -->
+<div class="divleft">
+<div class="huanchonyh"></div>
+</div>
+
+<!-- 三角形 -->
+<div class="divleft shanjx">
+<div class="shanjiaos"></div>
+</div>
+
+</body>
+</html>
