@@ -32,6 +32,9 @@ animation-delay 多少秒开始
 border的巧用
 3.缓冲圆环
 4.三角形的创建
+5.hover应用
+添加蒙层,边框旋转
+transform: translateY(-50%) 针对自身像上走50%
 
 
 

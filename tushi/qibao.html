@@ -131,6 +131,61 @@
 			border-left: 100px solid #009999;
 		}
 		/*三角形结束*/
+
+		/*hover改变样式开始*/
+			.hvoera,.img,.mask,.border{
+				width: 300px;
+				height: 300px;
+				border-radius: 100%;
+			}
+			.hvoera .img{
+				background: #CC99CC;
+				background-size: cover;
+				background-position: 50% 50%;
+			}
+			.hvoera{
+				position: relative;
+				display: block;
+			}
+			.hvoera .mask,.hvoera .border{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.hvoera .mask{
+				text-align: center;
+				color: rgba(255,255,255,0);
+				transition: all 0.5s ease-in;
+			}
+			.hvoera .mask .info{
+				color: #000;
+				margin-top: 50%;
+				transform: translateY(-50%);
+			}
+			.hvoera .border{
+				width: 298px;
+				height: 298px;
+				border:10px solid #99CCCC;
+				border-left-color: #9999CC;
+				border-top-color: #9999CC;
+				left: -9px;
+				top: -9px;
+				/*box-sizing: border-box;*/
+				transition: all 0.5s ease-in;
+
+			}
+			.hvoera:hover .info{
+				color: #fff;
+			}
+			.hvoera:hover .mask{
+				background-color: rgba(0,0,0,.5); 
+				color: rgba(255,255,255,1);
+			}
+			.hvoera:hover .border{
+				transform: rotate(180deg);
+
+			}
+		/*hover改变样式结束*/
 	</style>
 </head>
 <body>
@@ -167,5 +222,18 @@
 <div class="shanjiaos"></div>
 </div>
 
+<!-- hover改变样式 -->
+<div class="divleft shanjx">
+	<a href="" class="hvoera">
+		<div class="img"></div>
+		<div class="mask">
+			<div class="info">
+				<h3>Hover</h3>
+				<p>鼠标悬浮</p>
+			</div>
+		</div>
+		<div class="border"></div>
+	</a>
+</div>
 </body>
 </html>
